@@ -1,0 +1,32 @@
+.content{
+    display: flex;
+    flex-wrap: nowrap;
+    /*border: 1px solid black;*/
+    position: absolute;
+    /*top: 40px;  Header Height */
+    /*bottom: 20px;  Footer Height */
+    height:45em;
+    width: 100%;
+}
+
+.editor{
+    border-right: 1px solid black;
+    width: 50%;
+    height: 95%;
+}
+
+.inputfield{
+    width: 95%;
+    height: 45em;
+    margin: 1%;
+    resize: none;
+}
+
+#markdown-text{
+    margin: 1%;
+    color:black;
+}
+
+.contentTop{
+    margin: 1%;
+}
