@@ -1,12 +1,14 @@
 .content{
-    display: flex;
-    flex-wrap: nowrap;
-    /*border: 1px solid black;*/
-    position: absolute;
     /*top: 40px;  Header Height */
     /*bottom: 20px;  Footer Height */
     height:45em;
     width: 100%;
+}
+
+.flex-nowrap{
+    display: flex;
+    flex-wrap: nowrap;
+    /*border: 1px solid black;*/
 }
 
 .editor{
