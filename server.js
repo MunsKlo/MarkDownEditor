@@ -9,4 +9,4 @@ app.get('/', (req, res) => {
     res.render('../views/index.ejs')
 })
 
-app.listen(port, () => console.log(`Server listening to port: ${port}`))
+app.listen(port, () => console.log(`Server listening to port: ${port}\nlocalhost:3000`))
