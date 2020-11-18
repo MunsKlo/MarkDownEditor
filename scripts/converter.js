@@ -8,23 +8,51 @@ function fillDiv(){
     document.getElementById("markdown-text").innerHTML = htmlMd
 }
 
-<<<<<<< HEAD
-document.getElementById("inputfield").addEventListener('input', () => fillDiv())
-=======
 function makeHeader(){
     if(window.Selection){
         var textarea = document.getElementById('inputfield')
         var text = (textarea.value).substring(textarea.selectionStart, textarea.selectionEnd)
+        text = text.trim();
+        var newText = setHeader(text)
+        setNewTextinTextArea(textarea, newText)
+        fillDiv()
 
-        if(text[0] == '#'){
-            for(i = 0; i > text.length; i++){
-                
+    }
+}
+
+function setHeader(text){
+    var counter = 0
+    if(text[0] == '#'){
+        counter = 1
+        for(i = 1; i < text.length; i++){
+            if(text[i] == '#'){
+                counter++
+            }
+            else{
+                break
             }
         }
-        console.log(textarea.selectionStart)
     }
+    else{
+        return '#' + text
+    }
+    console.log(counter)
+    if(counter > 5){
+        text = text.substring(counter, text.length)
+        return text
+    }
+    else{
+        return '#' + text
+    }
+}
+
+function setNewTextinTextArea(textarea, newText){
+    var textareaBegin = textarea.value.substring(0, textarea.selectionStart)
+    var textareaEnd = textarea.value.substring(textarea.selectionEnd, textarea.value.length)
+    var newValue = `${textareaBegin}${newText}${textareaEnd}`
+    console.log(textarea.length)
+    textarea.value = newValue
 }
 
 document.getElementById("inputfield").addEventListener('input', () => fillDiv())
 document.getElementById("makeHeading").addEventListener('click', () => makeHeader())
->>>>>>> 10f21f3fef0e2338850d18831e81c372cdfd77ad
