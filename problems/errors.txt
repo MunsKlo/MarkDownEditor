@@ -1,0 +1,1 @@
+if there is a ',' or other character like that behind the selected text, it created white space between the selected text and the character
